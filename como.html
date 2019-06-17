@@ -39,15 +39,44 @@
                     <div class="row">
                       <div class="col-sm">
                             <div class="card" style="width: 50%;">
-                                    <img class="card-img-top" src="assets/imagenes/dij.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="assets/imagenes/dijkstra.png" alt="Card image cap">
                                     <div class="card-body">
-                                      <h5 class="card-title">Algoritmo de Dijkstra</h5>
-                                      <p class="card-text">El algoritmo de Dijkstra, también llamado algoritmo de caminos mínimos, es un algoritmo para la determinación del camino mas corto, dado un vértice origen, hacia el resto de los vértices en un grafo que tiene pesos en cada arista. Su nombre alude a Edsger Dijkstra, científico de la computación de los Países Bajos que lo describió por primera vez en 1959.</p>
-                                      <a href="como.html" class="btn btn-primary">Código</a>
+                                      <h5 class="card-title">Algoritmo de Dijkstra en JavaScript</h5>
+                                      <h4>Seudo codigo</h4>
+                                      <p>función Dijkstra (Grafo G, nodo_salida s)
+                                            //Usaremos un vector para guardar las distancias del nodo salida al resto
+                                            entero distancia[n] 
+                                            //Inicializamos el vector con distancias iniciales
+                                            booleano visto[n] 
+                                            //vector de boleanos para controlar los vértices de los que ya tenemos la distancia mínima
+                                            para cada w ∈ V[G] hacer
+                                               Si (no existe arista entre s y w) entonces
+                                                   distancia[w] = Infinito //puedes marcar la casilla con un -1 por ejemplo
+                                               Si_no
+                                                   distancia[w] = peso (s, w)
+                                               fin si 
+                                            fin para
+                                            distancia[s] = 0
+                                            visto[s] = cierto
+                                            //n es el número de vértices que tiene el Grafo
+                                            mientras que (no_estén_vistos_todos) hacer 
+                                               vértice = tomar_el_mínimo_del_vector distancia y que no esté visto;
+                                               visto[vértice] = cierto;
+                                               para cada w ∈ sucesores (G, vértice) hacer
+                                                   si distancia[w]>distancia[vértice]+peso (vértice, w) entonces
+                                                      distancia[w] = distancia[vértice]+peso (vértice, w)
+                                                   fin si
+                                               fin para 
+                                            fin mientras
+                                          fin función.</p>
+                                      <p class="card-text">Para ver el resultado de este script es necesario ver la consola del navegador</p>
+                                      <a href="algoritmo-dijkstra.js" class="btn btn-primary">Ver codigo JavaScript</a>
                                     </div>
                             </div>
                       </div>
                     </div>
                   </div>
+
+        <script src="algoritmo-dijkstra.js" type="text/javascript"></script>
     </body>
 </html>
