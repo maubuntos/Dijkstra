@@ -38,7 +38,7 @@ function PriorityQueue () {
           path = [],
           smallest, vertex, neighbor, alt;
   
-    //Algoritmo de relacion de vertices
+    //Algoritmo de relacion de vertices (iteracion del codigo de arriba)
       for(vertex in this.vertices) {
         if(vertex === start) {
           distances[vertex] = 0;
@@ -51,7 +51,9 @@ function PriorityQueue () {
   
         previous[vertex] = null;
       }
-  
+      //Comparaciones
+
+
       while(!nodes.isEmpty()) {
         smallest = nodes.dequeue();
   
@@ -83,7 +85,8 @@ function PriorityQueue () {
           }
         }
       }
-  
+      
+      //Regresa la ruta mas corta de todas las comparaciones
       return path;
     };
   }
