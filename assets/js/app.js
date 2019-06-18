@@ -49,7 +49,7 @@ document.getElementById("form1").addEventListener("submit", function(e) {
           var distancia = Number((response.routes[0].legs[0].distance.text.replace("km","")).replace(",","."));
           tarifa.classList.remove("none");
 
-          var costo = distancia*18.07;
+          var costo = distancia*9.00;
           console.log(costo);
 
           if (costo < 4){
